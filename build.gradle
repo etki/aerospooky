@@ -1,0 +1,22 @@
+group 'me.etki'
+version '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '4.11'
+    aerospikeVersion = '3.+'
+}
+
+dependencies {
+    compile group: 'com.aerospike', name: 'aerospike-client', version: aerospikeVersion
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
